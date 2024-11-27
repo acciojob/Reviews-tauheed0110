@@ -42,18 +42,16 @@ const App = () => {
     const [state, setState] = useState(0)
 
     function handleRandom(){
-        const randomValue = Math.floor(Math.random() * reviews.length) + 1;
+        const randomValue = Math.floor(Math.random() * 3) + 1;
         setState(randomValue);
     }
     function handlePrev(){
-        if(state > 0){
-            setState(state-1);
-        }
+        Math.abs(state-1)
+        setState(state % 4);
     }
     function handleNext(){
-        if(state < reviews.length-1){
-            setState(state+1);
-        }
+        Math.abs(state+1)
+        setState(state % 4);
     }
   return (
     <div>
