@@ -42,7 +42,7 @@ const App = () => {
     const [state, setState] = useState(0)
 
     function handleRandom(){
-        const randomValue = Math.floor(Math.random() * reviews.length);
+        const randomValue = Math.floor(Math.random() * reviews.length) + 1;
         setState(randomValue);
     }
     function handlePrev(){
@@ -74,3 +74,5 @@ const App = () => {
 }
 
 export default App;
+
+// apart from a next and previous button it should have a button which randomly shows a review and avoids the current index as the next review , the button should have a className as random-btn and have the text as surprise me.
