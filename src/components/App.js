@@ -59,14 +59,16 @@ const App = () => {
     <div>
         <h1 id="review-heading">Our Reviews</h1>
         <div className="review">
-            <p className='author' id="author-id">{reviews[state].name}</p>
+            <p className='author' id={"author-"+reviews[state].id}>{reviews[state].name}</p>
             <p className='job'>{reviews[state].job}</p>
             <p className='info'>{reviews[state].text}</p>
             <img className="person-img" src={reviews[state].image} alt='loading..'/>
+
+            <button className='prev-btn' onClick={handlePrev}>Previous</button>
+            <button className='next-btn' onClick={handleNext}>Next</button>
+            <button className='random-btn' onClick={handleRandom}>surprise me</button>
         </div>
-        <button className='prev-btn' onClick={handlePrev}>Previous</button>
-        <button className='next-btn' onClick={handleNext}>Next</button>
-        <button className='random-btn' onClick={handleRandom}>surprise me</button>
+        
     </div>
   );
 }
