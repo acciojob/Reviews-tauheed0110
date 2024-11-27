@@ -46,12 +46,14 @@ const App = () => {
         setState(randomValue);
     }
     function handlePrev(){
-        Math.abs(state-1)
-        setState(state % 4);
+        if(state > 0){
+            setState(state-1);
+        }
     }
     function handleNext(){
-        Math.abs(state+1)
-        setState(state % 4);
+        if(state < 3){
+            setState(state+1);
+        }
     }
   return (
     <div>
